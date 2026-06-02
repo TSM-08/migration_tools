@@ -1,0 +1,15 @@
+# Ignore generated reports
+report/
+
+# Ignore data source/target folders
+data/src/
+data/trg/
+
+# Ignore Python virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Ignore VS Code workspace settings
+.vscode/

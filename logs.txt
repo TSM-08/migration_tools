@@ -1,0 +1,281 @@
+Logs of Performing Checks for Migrated Views
+===============================================
+
+Check list: view_list
+Data sets to compare: 27
+
+=== bpsa_v_source_code_pe_code ===
+row_count_check: PASS (src=66357, trg=66357)
+column_name_consistency: PASS (same_order=True)
+full_data_verification: PASS (Exact match)
+
+=== nsa_v_all_pc_ref_grouped ===
+row_count_check: PASS (src=1902, trg=1902)
+column_name_consistency: PASS (same_order=True)
+full_data_verification: PASS (Exact match)
+
+=== nsa_v_all_pc_to_pe ===
+row_count_check: PASS (src=1860, trg=1860)
+column_name_consistency: PASS (same_order=True)
+full_data_verification: PASS (Exact match)
+
+=== nsa_v_all_product_code_source_code ===
+row_count_check: PASS (src=51158, trg=51158)
+column_name_consistency: PASS (same_order=True)
+full_data_verification: PASS (Exact match)
+
+=== nsa_v_all_product_codes ===
+row_count_check: PASS (src=951, trg=951)
+column_name_consistency: PASS (same_order=True)
+full_data_verification: PASS (Exact match)
+
+=== nsa_v_all_sc_pc_ref_grouped ===
+row_count_check: PASS (src=24524, trg=24524)
+column_name_consistency: PASS (same_order=True)
+full_data_verification: PASS (Exact match)
+
+=== nsa_v_all_sc_ref_grouped ===
+row_count_check: PASS (src=11311, trg=11311)
+column_name_consistency: PASS (same_order=True)
+full_data_verification: PASS (Exact match)
+
+=== nsa_v_all_sc_ref_grouped_1 ===
+row_count_check: PASS (src=11444, trg=11444)
+column_name_consistency: PASS (same_order=True)
+full_data_verification: PASS (Exact match)
+
+=== nsa_v_all_sc_ref_grouped_2 ===
+row_count_check: PASS (src=11444, trg=11444)
+column_name_consistency: PASS (same_order=True)
+full_data_verification: PASS (Exact match)
+
+=== nsa_v_all_source_codes ===
+row_count_check: PASS (src=11444, trg=11444)
+column_name_consistency: PASS (same_order=True)
+full_data_verification: PASS (Exact match)
+
+=== nsa_v_feed_content_collection ===
+row_count_check: PASS (src=506, trg=506)
+column_name_consistency: PASS (same_order=True)
+full_data_verification: PASS (Exact match)
+
+=== nsa_v_feed_country ===
+row_count_check: PASS (src=3134, trg=3134)
+column_name_consistency: PASS (same_order=True)
+full_data_verification: PASS (Exact match)
+
+=== nsa_v_feed_industry ===
+row_count_check: PASS (src=1796, trg=1796)
+column_name_consistency: PASS (same_order=True)
+full_data_verification: PASS (Exact match)
+
+=== nsa_v_feed_region ===
+row_count_check: PASS (src=1204, trg=1204)
+column_name_consistency: PASS (same_order=True)
+full_data_verification: PASS (Exact match)
+
+=== nsa_v_feed_source_code ===
+row_count_check: PASS (src=656, trg=656)
+column_name_consistency: PASS (same_order=True)
+full_data_verification: PASS (Exact match)
+
+=== nsa_v_feed_to_codes ===
+row_count_check: PASS (src=13258, trg=13258)
+column_name_consistency: PASS (same_order=True)
+full_data_verification: PASS (Exact match)
+
+=== nsa_v_feeds ===
+row_count_check: PASS (src=327, trg=327)
+column_name_consistency: PASS (same_order=True)
+full_data_verification: FAIL (Data mismatch-EXCEPT semantics)
+  src_only_rows: 1
+  trg_only_rows: 1
+
+=== nsa_v_mapped_source_code ===
+row_count_check: PASS (src=382, trg=382)
+column_name_consistency: PASS (same_order=True)
+full_data_verification: PASS (Exact match)
+
+=== nsa_v_mrn_pe_search ===
+error_message: there is no data for comparison
+row_count_check: NULL (src=0, trg=0)
+column_name_consistency: NULL
+full_data_verification: NULL
+
+=== nsa_v_news_map ===
+row_count_check: PASS (src=867, trg=867)
+column_name_consistency: PASS (same_order=True)
+full_data_verification: PASS (Exact match)
+
+=== nsa_v_news_map_variant ===
+error_message: there is no data for comparison
+row_count_check: NULL (src=0, trg=0)
+column_name_consistency: NULL
+full_data_verification: NULL
+
+=== nsa_v_not_covered_feeds ===
+row_count_check: PASS (src=105, trg=105)
+column_name_consistency: PASS (same_order=True)
+full_data_verification: PASS (Exact match)
+
+=== rds_v_all_pc_pe ===
+row_count_check: PASS (src=930, trg=930)
+column_name_consistency: PASS (same_order=True)
+full_data_verification: PASS (Exact match)
+
+=== rds_v_pc_pe ===
+error_message: there is no data for comparison
+row_count_check: NULL (src=0, trg=0)
+column_name_consistency: NULL
+full_data_verification: NULL
+
+=== tmp_nsa_v_feed_all_grouped ===
+row_count_check: PASS (src=654, trg=654)
+column_name_consistency: PASS (same_order=True)
+full_data_verification: FAIL (Data mismatch-EXCEPT semantics)
+  src_only_rows: 78
+  trg_only_rows: 78
+
+=== ucdp_v_feed_to_sc ===
+row_count_check: PASS (src=423, trg=423)
+column_name_consistency: PASS (same_order=True)
+full_data_verification: PASS (Exact match)
+
+=== view_product_source_codes ===
+row_count_check: PASS (src=15821, trg=15821)
+column_name_consistency: PASS (same_order=True)
+full_data_verification: PASS (Exact match)
+
+=== Check Results ===
+-----------------------------------+--------------+-----------+--------------+---------
+Name                               |  Row Count   |  Columns  |  Data Check  |  Status 
+-----------------------------------+--------------+-----------+--------------+---------
+bpsa_v_source_code_pe_code         |     PASS     |    PASS   |     PASS     |   PASS  
+nsa_v_all_pc_ref_grouped           |     PASS     |    PASS   |     PASS     |   PASS  
+nsa_v_all_pc_to_pe                 |     PASS     |    PASS   |     PASS     |   PASS  
+nsa_v_all_product_code_source_code |     PASS     |    PASS   |     PASS     |   PASS  
+nsa_v_all_product_codes            |     PASS     |    PASS   |     PASS     |   PASS  
+nsa_v_all_sc_pc_ref_grouped        |     PASS     |    PASS   |     PASS     |   PASS  
+nsa_v_all_sc_ref_grouped           |     PASS     |    PASS   |     PASS     |   PASS  
+nsa_v_all_sc_ref_grouped_1         |     PASS     |    PASS   |     PASS     |   PASS  
+nsa_v_all_sc_ref_grouped_2         |     PASS     |    PASS   |     PASS     |   PASS  
+nsa_v_all_source_codes             |     PASS     |    PASS   |     PASS     |   PASS  
+nsa_v_feed_content_collection      |     PASS     |    PASS   |     PASS     |   PASS  
+nsa_v_feed_country                 |     PASS     |    PASS   |     PASS     |   PASS  
+nsa_v_feed_industry                |     PASS     |    PASS   |     PASS     |   PASS  
+nsa_v_feed_region                  |     PASS     |    PASS   |     PASS     |   PASS  
+nsa_v_feed_source_code             |     PASS     |    PASS   |     PASS     |   PASS  
+nsa_v_feed_to_codes                |     PASS     |    PASS   |     PASS     |   PASS  
+nsa_v_feeds                        |     PASS     |    PASS   |     FAIL     |   FAIL  
+nsa_v_mapped_source_code           |     PASS     |    PASS   |     PASS     |   PASS  
+nsa_v_mrn_pe_search                |     NULL     |    NULL   |     NULL     |   <ER>  
+nsa_v_news_map                     |     PASS     |    PASS   |     PASS     |   PASS  
+nsa_v_news_map_variant             |     NULL     |    NULL   |     NULL     |   <ER>  
+nsa_v_not_covered_feeds            |     PASS     |    PASS   |     PASS     |   PASS  
+rds_v_all_pc_pe                    |     PASS     |    PASS   |     PASS     |   PASS  
+rds_v_pc_pe                        |     NULL     |    NULL   |     NULL     |   <ER>  
+tmp_nsa_v_feed_all_grouped         |     PASS     |    PASS   |     FAIL     |   FAIL  
+ucdp_v_feed_to_sc                  |     PASS     |    PASS   |     PASS     |   PASS  
+view_product_source_codes          |     PASS     |    PASS   |     PASS     |   PASS  
+-----------------------------------+--------------+-----------+--------------+---------
+
+Total Passed: 22
+Total Failed: 2
+Total Errors: 3
+
+
+Summary:
+Total datasets checked: 27
+Succeeded (PASS): 22
+Marked as error (<ER>) because both source and target are empty: 3
+Failed due to data consistency (FAIL): 2
+
+
+Error group (both datasets empty).
+- nsa_v_mrn_pe_search
+- nsa_v_news_map_variant
+- rds_v_pc_pe
+It is not possible to check business logic for the implemented views because both datasets are empty.
+
+
+Failed data consistency only:
+- nsa_v_feeds
+- tmp_nsa_v_feed_all_grouped
+
+Notes for nsa_v_feeds:
+- nsa_v_feeds has only one row discrepancy.
+- This is related to MySQL handling of fields in SELECT that are not included in GROUP BY.
+- In this case, MySQL returns copyrightOwner as NULL, while MSSQL takes the first row from the group, where the value is an empty string ("").
+
+Example
+
+MySQL:
+    {'feed_code': 'news_lynx_rsf', 'isnative': '1', 'isinternal': '1', 'feedid': '7', 'visibility': 'visible', 'state': 'active', 'description': 'Editorial News Stories and Alerts (RSF)|Editorial News Stories and Alerts (RSF) QA', 
+    'copyrightOwner': '__NULL__', 
+    'parser': 'parsn_lynx_rsf|parsn_lynx_rsf2', 'parser_descr': 'parsn_lynx_rsf - Lynx RSF Parser|parsn_lynx_rsf2 - Lynx RSF Parser', 'onboarder': 'onbdn_lynx_rsf', 'onboarder_descr': 'onbdn_lynx_rsf - Lynx RSF Onboarder', 'feed_instance_count': '2', 'snapshot_id': '1947'}
+  
+MSSQL:
+    {'feed_code': 'news_lynx_rsf', 'isnative': '1', 'isinternal': '1', 'feedid': '7', 'visibility': 'visible', 'state': 'active', 'description': 'Editorial News Stories and Alerts (RSF)|Editorial News Stories and Alerts (RSF) QA', 
+    'copyrightOwner': '', 
+    'parser': 'parsn_lynx_rsf|parsn_lynx_rsf2', 'parser_descr': 'parsn_lynx_rsf - Lynx RSF Parser|parsn_lynx_rsf2 - Lynx RSF Parser', 'onboarder': 'onbdn_lynx_rsf', 'onboarder_descr': 'onbdn_lynx_rsf - Lynx RSF Onboarder', 'feed_instance_count': '2', 'snapshot_id': '1947'}
+
+
+Notes for tmp_nsa_v_feed_all_grouped:
+- Diff count: 78 rows.
+- The difference happened because the `pc` field in MySQL is restricted in length.
+- As a result, data is truncated for very large concatenated lines.
+
+
+Example
+
+MySQL:
+    {
+		"feed_code" : "news_apn",
+		"description" : "Argus PDF News - APN, ARGS",
+		"parser" : "parsn_apn",
+		"parser_descr" : "parsn_apn - Argus PDF News - APN, ARGS",
+		"onboarder" : "onbdn_apn",
+		"onboarder_descr" : "onbdn_apn - Argus PDF News - APN, ARGS",
+		"copyrightOwner" : "",
+		"sc" : "NS:ARGS",
+		"sc_count" : 1,
+
+        -- Here pc list is truncated
+		"pc" : "NP:AABD, NP:AABO, NP:AACPR, NP:AAFOR, NP:AAME, NP:AAPRD, NP:ABGP, NP:ABOO, NP:ACAO, NP:ACASP, NP:ACME, NP:ACPRD, NP:ADARM, NP:ADBDA, NP:ADBEN, NP:ADBUO, NP:ADBUT, NP:ADCHR, NP:ADETH, NP:ADFOC, NP:ADGME, NP:ADLNG, NP:ADMET, NP:ADPOL, NP:ADPRO, NP:ADTOL, NP:ADTOX, NP:AEBO, NP:AEELC, NP:AEEMM, NP:AENAT, NP:AEOAD, NP:AEPRD, NP:AFAE, NP:AFNR, NP:AGAIR, NP:AGARW, NP:AGBAS, NP:AGBIM, NP:AGBIO, NP:AGBIT, NP:AGBMT, NP:AGCIN, NP:AGCOK, NP:AGCON, NP:AGCRB, NP:AGCRO, NP:AGCRU, NP:AGCTP, NP:AGFAF, NP:AGFFB, NP:AGFFP, NP:AGFNA, NP:AGFND, NP:AGFOF, NP:AGFRE, NP:AGJET, NP:AGLNG, NP:AGLPG, NP:AGMAR, NP:AGMCC, NP:AGMEX, NP:AGMKT, NP:AGNE, NP:AGNPK, NP:AGPCL, NP:AGPOL, NP:AGPRO, NP:AGRAB, NP:AGSEA, NP:AGUAS, NP:AGW, NP:AHFFS, NP:AHMC, NP:ALENG, NP:ALMKT, NP:AMAO, NP:AMEGI, NP:AMSOR, NP:AMTBE, NP:ANAS, NP:ANZE, NP:APCO, NP:APCR, NP:APPE, NP:AQPO, NP:ARARE, NP:ARBAM, NP:ARBAT, NP:ARBC, NP:ARBNI, NP:ARBO, NP:ARBOC, NP:ARBPH, NP:ARBPO, NP:ARBSU, NP:ARCAD, NP:ARCAS, 
+                NP:ARCBF, NP:ARCOA, NP:ARDBL, NP:ARDCR, NP:AREMO, NP:ARENG, NP:AREN",
+		"pc_count" : 159,
+		
+        "pe_code" : "338, 6650, 7025, 7027, 7033, 7141, 7273, 7274, 7275, 7276, 7277, 7279, 7280, 7282, 7283, 7284, 7288, 7289, 7290, 7301, 7302, 7304, 7305, 7306, 7308, 7311, 7319, 7320, 7321, 7322, 7352, 7377, 7683, 7684, 7716, 7719, 7721, 7722, 7727, 7729, 7730, 7733, 7735, 7736, 7743, 7759, 7773, 7774, 7775, 7776, 7779, 7783, 7786, 7787, 7791, 7792, 7793, 7799, 7800, 7802, 7803, 7804, 7805, 7807, 7808, 7809, 7810, 7811, 7812, 7813, 7814, 7815, 7816, 7817, 7819, 7820, 7822, 7823, 7824, 7826, 7828, 7829, 7831, 7832, 7833, 7836, 7837, 7839, 7840, 7841, 7842, 7843, 7844, 7845, 7847, 7849, 7850, 7851, 7852, 7853, 7855, 7858, 7865, 7867, 7877, 7889, 7903, 7905, 7915, 7916, 7917, 7929, 7930, 9401, 9402, 9403, 9405, 9406, 9407, 9408, 9409, 9410, 9411, 9412, 9413, 9418, 9420, 9421, 9426, 9427, 9428, 9432, 9433, 9434, 9437, 9438, 9448, 9449, 9457, 9458, 9459, 9461, 9462, 9463, 9465, 9467, 9468, 9469, 9470, 9472, 9477, 9487, 9491, 9493, 9494, 9495",
+		"pe_count" : 156,
+		"content_collection" : "News Wires",
+		"cc_count" : 1,
+		"feed_instance_count" : 1,
+		"consolidation_id" : 654
+	}
+
+MSSQL:
+    {
+		"feed_code" : "news_apn",
+		"description" : "Argus PDF News - APN, ARGS",
+		"parser" : "parsn_apn",
+		"parser_descr" : "parsn_apn - Argus PDF News - APN, ARGS",
+		"onboarder" : "onbdn_apn",
+		"onboarder_descr" : "onbdn_apn - Argus PDF News - APN, ARGS",
+		"copyrightOwner" : "",
+		"sc" : "NS:ARGS",
+		"sc_count" : 1,
+
+        -- Full list of pc values
+		"pc" : "NP:AABD, NP:AABO, NP:AACPR, NP:AAFOR, NP:AAME, NP:AAPRD, NP:ABGP, NP:ABOO, NP:ACAO, NP:ACASP, NP:ACME, NP:ACPRD, NP:ADARM, NP:ADBDA, NP:ADBEN, NP:ADBUO, NP:ADBUT, NP:ADCHR, NP:ADETH, NP:ADFOC, NP:ADGME, NP:ADLNG, NP:ADMET, NP:ADPOL, NP:ADPRO, NP:ADTOL, NP:ADTOX, NP:AEBO, NP:AEELC, NP:AEEMM, NP:AENAT, NP:AEOAD, NP:AEPRD, NP:AFAE, NP:AFNR, NP:AGAIR, NP:AGARW, NP:AGBAS, NP:AGBIM, NP:AGBIO, NP:AGBIT, NP:AGBMT, NP:AGCIN, NP:AGCOK, NP:AGCON, NP:AGCRB, NP:AGCRO, NP:AGCRU, NP:AGCTP, NP:AGFAF, NP:AGFFB, NP:AGFFP, NP:AGFNA, NP:AGFND, NP:AGFOF, NP:AGFRE, NP:AGJET, NP:AGLNG, NP:AGLPG, NP:AGMAR, NP:AGMCC, NP:AGMEX, NP:AGMKT, NP:AGNE, NP:AGNPK, NP:AGPCL, NP:AGPOL, NP:AGPRO, NP:AGRAB, NP:AGSEA, NP:AGUAS, NP:AGW, NP:AHFFS, NP:AHMC, NP:ALENG, NP:ALMKT, NP:AMAO, NP:AMEGI, NP:AMSOR, NP:AMTBE, NP:ANAS, NP:ANZE, NP:APCO, NP:APCR, NP:APPE, NP:AQPO, NP:ARARE, NP:ARBAM, NP:ARBAT, NP:ARBC, NP:ARBNI, NP:ARBO, NP:ARBOC, NP:ARBPH, NP:ARBPO, NP:ARBSU, NP:ARCAD, NP:ARCAS, 
+                NP:ARCBF, NP:ARCOA, NP:ARDBL, NP:ARDCR, NP:AREMO, NP:ARENG, NP:ARENS, NP:AREXN, NP:ARFES, NP:ARFFE, NP:ARFOL, NP:ARGDF, NP:ARGEN, NP:ARGGF, NP:ARGSF, NP:ARGTF, NP:ARHAN, NP:ARHYR, NP:ARJAU, NP:ARLIV, NP:ARLPG, NP:ARMD, NP:ARMFO, NP:ARMOF, NP:ARMP, NP:ARMPO, NP:ARMSO, NP:ARMTB, NP:ARNTR, NP:AROO, NP:AROUT, NP:ARPAN, NP:ARPRD, NP:ARRN, NP:ARRPL, NP:ARSA, NP:ARSSF, NP:ARTPT, NP:ARTUR, NP:ARTXO, NP:ARUMF, NP:ARURO, NP:ARVCM, NP:ARWASO, NP:ASFED, NP:ATMO, NP:AUCOD, NP:AUCRU, NP:AUELC, NP:AUETH, NP:AUNAT, NP:AUNGL, NP:AUPRD, NP:AUPTR, NP:AUWCP, NP:AWLPG, NP:FMBAM, NP:FMBNI, NP:FMBPH, NP:FMBPO, NP:FMBSU",
+		"pc_count" : 159,
+
+		"pe_code" : "338, 6650, 7025, 7027, 7033, 7141, 7273, 7274, 7275, 7276, 7277, 7279, 7280, 7282, 7283, 7284, 7288, 7289, 7290, 7301, 7302, 7304, 7305, 7306, 7308, 7311, 7319, 7320, 7321, 7322, 7352, 7377, 7683, 7684, 7716, 7719, 7721, 7722, 7727, 7729, 7730, 7733, 7735, 7736, 7743, 7759, 7773, 7774, 7775, 7776, 7779, 7783, 7786, 7787, 7791, 7792, 7793, 7799, 7800, 7802, 7803, 7804, 7805, 7807, 7808, 7809, 7810, 7811, 7812, 7813, 7814, 7815, 7816, 7817, 7819, 7820, 7822, 7823, 7824, 7826, 7828, 7829, 7831, 7832, 7833, 7836, 7837, 7839, 7840, 7841, 7842, 7843, 7844, 7845, 7847, 7849, 7850, 7851, 7852, 7853, 7855, 7858, 7865, 7867, 7877, 7889, 7903, 7905, 7915, 7916, 7917, 7929, 7930, 9401, 9402, 9403, 9405, 9406, 9407, 9408, 9409, 9410, 9411, 9412, 9413, 9418, 9420, 9421, 9426, 9427, 9428, 9432, 9433, 9434, 9437, 9438, 9448, 9449, 9457, 9458, 9459, 9461, 9462, 9463, 9465, 9467, 9468, 9469, 9470, 9472, 9477, 9487, 9491, 9493, 9494, 9495",
+		"pe_count" : 156,
+		"content_collection" : "News Wires",
+		"cc_count" : 1,
+		"feed_instance_count" : 1,
+		"consolidation_id" : 654
+    }
+
+In this case, pc_count = 159, but the MySQL view does not reflect all pc values.

@@ -1,0 +1,51 @@
+data_checks:
+  data_dir: "data"
+  view_list:
+    - "bpsa_v_source_code_pe_code"
+    - "nsa_v_all_pc_ref_grouped"
+    - "nsa_v_all_pc_to_pe"
+    - "nsa_v_all_product_code_source_code"
+    - "nsa_v_all_product_codes"
+    - "nsa_v_all_sc_pc_ref_grouped"
+    - "nsa_v_all_sc_ref_grouped"
+    - "nsa_v_all_sc_ref_grouped_1"
+    - "nsa_v_all_sc_ref_grouped_2"
+    - "nsa_v_all_source_codes"
+    - "nsa_v_feed_content_collection"
+    - "nsa_v_feed_country"
+    - "nsa_v_feed_industry"
+    - "nsa_v_feed_region"
+    - "nsa_v_feed_source_code"
+    - "nsa_v_feed_to_codes"
+    - "nsa_v_feeds"
+    - "nsa_v_mapped_source_code"
+    - "nsa_v_mrn_pe_search"
+    - "nsa_v_news_map"
+    - "nsa_v_news_map_variant"
+    - "nsa_v_not_covered_feeds"
+    - "rds_v_all_pc_pe"
+    - "rds_v_pc_pe"
+    - "tmp_nsa_v_feed_all_grouped"
+    - "ucdp_v_feed_to_sc"
+    - "view_product_source_codes"
+
+  data_list:
+    - "tmp_nsa_v_feed_all_grouped"
+
+  # Define field mappings for fields that have different names but should be compared
+  # <dataset_name>: {source_field: target_field}
+  mapping_fields:
+    nsa_v_mapped_source_code:
+      "STATUS": "status"
+  
+  # Exclude fields that are expected to differ and not relevant for the checks 
+  # <dataset_name>: [list of fields to exclude]
+  exclude_fields:
+    tmp_nsa_v_feed_all_grouped: ["pc", "pe_code"]
+    nsa_v_feeds: ["copyrightOwner"]
+      
+  
+run_mode:
+  check_list: "view_list"
+  debug: 1    # 0: normal run, 1: debug mode with sample diff data
+  sample_diff_rows: 3
