@@ -2,14 +2,18 @@
 report/
 
 # Ignore data source/target folders
-data/src/
-data/trg/
+data*/src/
+data*/trg/
 
 # Ignore Python virtual environments
 .venv/
 venv/
 env/
 ENV/
+
+# Ignore Python bytecode and cache directories
+__pycache__/
+connectors/__pycache__/
 
 # Ignore VS Code workspace settings
 .vscode/
