@@ -1,28 +1,34 @@
+pyconnectors:
+  src:
+    type: MySQL
+    connector: MySqlConnector
+  trg:
+    type: MSSQL
+    connector: SqlServerConnector
+
 connections:
   src:
-    type: mysql
-    host: "mysql-host"
+    host: "a204956-scs-ppe-use1-shared-infra-nginx-proxy.newsapi-preprod.qa.aws.private.inf0.net"
     port: 3009
-    database: "mysql_db"
-    username: "mysql_user"
-    password: "mysql_password"
+    database: "ppe_nsa_db"
+    username: "nsa_ppe"
+    password: "BFgF5Mqua2QPR90Tj6QWX2ff6wr2DzBV"
     proxy:
       type: socks
-      host: "socksproxy.aaa.corp.services"
+      host: "socksproxy.hzl.corp.services"
       port: 1080
 
   trg:
-    type: mssql
     driver: "ODBC Driver 17 for SQL Server"
-    host: "mssql-host"
+    host: "a1a-52653-dev-sqlmi-nsadb-eus2-01.17a1da1a4de0.database.windows.net"
     port: 1433
-    database: "mssql_db"
-    username: "mssql_ser"
-    password: "mssql_password"
+    database: "nsa_db"
+    username: "lseguser"
+    password: "Lsegazurensasqlmi@123"
+    encrypt: true
+    trust_server_certificate: true
+    login_timeout: 30    
     proxy:
       type: socks
       host: "127.0.0.1"
       port: 1234
-    encrypt: true
-    trust_server_certificate: true
-    login_timeout: 30
