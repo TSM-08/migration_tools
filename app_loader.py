@@ -197,34 +197,11 @@ class DataFetcher:
 		data_dir = checks_cfg.get("data_dir", "data")
 		return str(data_dir)
 
-	# ------------------------------------------------------------------
-	# Query helpers
-	# ------------------------------------------------------------------
-
-	@staticmethod
-	def _fetch_rows(connection: BaseConnector, dataset_name: str) -> list[dict[str, Any]]:
-		"""Run SELECT * for the given dataset and return all rows as dicts."""
-		if connection.connection is None:
-			connection.connect()
-
-		assert connection.connection is not None
-		cursor = connection.connection.cursor()
-		try:
-			cursor.execute(f"SELECT * FROM {dataset_name}")  # noqa: S608 – dataset name comes from trusted config
-			columns = [col[0] for col in cursor.description]
-			return [dict(zip(columns, row)) for row in cursor.fetchall()]
-		finally:
-			cursor.close()
-
 	@staticmethod
 	def _write_json_file(file_path: Path, rows: list[dict[str, Any]]) -> None:
 		with file_path.open("w", encoding="utf-8") as f:
 			json.dump(rows, f, ensure_ascii=False, indent=2, default=str)
 			f.write("\n")
-
-	# ------------------------------------------------------------------
-	# Public API
-	# ------------------------------------------------------------------
 
 	def fetch_all(self) -> None:
 		"""Fetch every dataset in the configured check list for both src and trg."""
@@ -252,7 +229,7 @@ class DataFetcher:
 				for dataset_name in dataset_list:
 					print(f"  [{side}] fetching {dataset_name} ...", end=" ", flush=True)
 					try:
-						rows = self._fetch_rows(connection, dataset_name)
+						rows = connection.fetch_rows(dataset_name)
 						out_file = out_dir / f"{dataset_name}.json"
 						self._write_json_file(out_file, rows)
 						print(f"{len(rows)} rows -> {out_file.relative_to(self.base_dir)}")
