@@ -97,11 +97,8 @@ class ConnectionClassBuilder:
 		return connection_class(**constructor_params)
 
 
-_CONNECTION_CLASS_BUILDER = ConnectionClassBuilder()
-
-
 def build_connection(connection_name: str, connection_config: dict[str, Any]) -> BaseConnector:
-	return _CONNECTION_CLASS_BUILDER.build_connection(connection_name, connection_config)
+	return ConnectionClassBuilder().build_connection(connection_name, connection_config)
 
 
 def check_named_connection(connection_name: str, connection_config: dict[str, Any]) -> bool:
@@ -169,9 +166,6 @@ class DataFetcher:
 		self.app_config_path = app_config_path or base_dir / "config.yaml"
 		self.conn_config_path = conn_config_path or base_dir / "connection.yaml"
 
-	# ------------------------------------------------------------------
-	# Config helpers
-	# ------------------------------------------------------------------
 
 	def _load_app_config(self) -> dict[str, Any]:
 		with self.app_config_path.open("r", encoding="utf-8") as f:
