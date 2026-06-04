@@ -164,3 +164,15 @@ class SqlServerConnector(BaseConnector):
 				) from exc
 			raise
 		return self.connection
+
+	def fetch_rows(self, dataset_name: str) -> list[dict[str, Any]]:
+		self._ensure_connected()
+
+		assert self.connection is not None
+		cursor = self.connection.cursor()
+		try:
+			cursor.execute(f"SELECT * FROM [dbo].[{dataset_name}]")
+			columns = [col[0] for col in cursor.description]
+			return [dict(zip(columns, row)) for row in cursor.fetchall()]
+		finally:
+			cursor.close()

@@ -93,10 +93,14 @@ class BaseConnector(ABC):
 			self.connection.close()
 			self.connection = None
 
-	def execute_query(self, query: str, params: tuple[Any, ...] | None = None) -> list[tuple[Any, ...]]:
-		"""Execute a read query and return all rows."""
+	def _ensure_connected(self) -> None:
+		"""Ensure a live connection exists before running operations."""
 		if self.connection is None:
 			self.connect()
+
+	def execute_query(self, query: str, params: tuple[Any, ...] | None = None) -> list[tuple[Any, ...]]:
+		"""Execute a read query and return all rows."""
+		self._ensure_connected()
 
 		assert self.connection is not None
 		cursor = self.connection.cursor()
@@ -108,6 +112,10 @@ class BaseConnector(ABC):
 			return cursor.fetchall()
 		finally:
 			cursor.close()
+
+	@abstractmethod
+	def fetch_rows(self, dataset_name: str) -> list[dict[str, Any]]:
+		"""Return all rows from the dataset as dictionaries keyed by column name."""
 
 	def test_connection(self) -> bool:
 		"""Return True when a basic health query succeeds."""
